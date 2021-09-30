@@ -33,3 +33,27 @@ class Solution {
                 if (i == strs.length-1)
                     res = strs[i];
             }
+            
+            if (second.equals(first))
+                continue;
+            
+            while (a < f && b < s) {
+                // System.out.println(a+" "+b);
+                if (first.charAt(a) == second.charAt(b))
+                    res = first.substring(0, a + 1);
+                else {
+                    res = res.substring(0, b);
+                    break;
+                }
+                a++;
+                b++;
+            }
+            first = res;
+            // System.out.println("[+]" + res);
+​
+            if (res == "")
+                break;
+        }
+        return res;
+    }
+}
