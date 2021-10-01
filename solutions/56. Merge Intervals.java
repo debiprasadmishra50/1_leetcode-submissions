@@ -1,6 +1,3 @@
-    public int[][] mergeAnother(int[][] intervals) {↔}
-    
-    public int[][] merge(int[][] intervals) {
         int nMerged = 1;
         for(int i = 0; i< intervals.length; i++) {
             int[] interval = intervals[i];
@@ -27,3 +24,15 @@
         
         int[][] result = new int[nMerged][];
         for(int i = 0; i<nMerged; i++) {
+            result[i]= intervals[i];
+        }
+        return result;
+    }
+}
+// 
+// class SortComparator implements java.util.Comparator {
+//     @Override
+//  public int compare(int[] a, int[] b) {
+//         return a[0] - b[0];
+//  }
+// }
