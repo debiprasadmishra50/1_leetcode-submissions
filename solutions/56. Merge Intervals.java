@@ -1,4 +1,3 @@
-class Solution {
     public int[][] mergeAnother(int[][] intervals) {↔}
     
     public int[][] merge(int[][] intervals) {
@@ -20,3 +19,11 @@ class Solution {
                 } else {
                     if(c0 < m0) interval[0] = m0 = c0;
                     if(c1 > m1) interval[1] = m1 = c1;
+                }
+            }
+            intervals[nRemain++] = interval;
+            nMerged = nRemain;
+        }
+        
+        int[][] result = new int[nMerged][];
+        for(int i = 0; i<nMerged; i++) {
